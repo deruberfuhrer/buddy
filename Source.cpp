@@ -1,19 +1,27 @@
 #include <iostream>
+#include <ctime>
 #include <vector>
+#include <iomanip>
 using namespace std;
 
-int main() {
-	vector<int> myVector;
-	myVector.push_back(12);
-	myVector.push_back(-1000);
-	myVector.push_back(452);
-	myVector.push_back(-200000);
-	myVector.push_back(32000);
-	myVector.push_back(0);
+int main()
+{
+	vector<int> mV;
 
-	vector<int>::iterator it = myVector.begin();
+    mV.push_back(12);
+    mV.push_back(-1000);
+    mV.push_back(20000);
+    mV.push_back(1900);
+    mV.push_back(-1970);
 
-	for (it = myVector.begin(); it != myVector.end(); ++it) {
-		std::cout << *it << std::endl;
-	}
+     int max_mV = 0;
+    for (int i = 0; i < 5; i++)
+    {
+        if (mV[i] > max_mV)
+            max_mV = mV[i];
+        else (mV[i] <= max_mV);
+            continue;
+    }
+    cout << max_mV << endl;
+    return 0;
 }
